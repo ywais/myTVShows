@@ -46,6 +46,15 @@
   border-right: 1px solid black;
 }
 
+.like-div{
+  position: absolute;
+  top:5;
+  width: 40px;
+  height: 40px;
+  left: 45px;
+  cursor: pointer;
+}
+
 .go-back-link {
   position: absolute;
   top: 5;
