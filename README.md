@@ -13,7 +13,7 @@ Welcome to our challenge! In this challenge we will test your abilities to creat
 
 ## Requirements
 ---
-* First go into the `shows` directory and run `npm i` in your terminal to install all the dependencies you will need to complete this challenge.
+* First run `npm i` in your terminal to install all the dependencies you will need to complete this challenge.
 
 * In the home page you need to display top 20 TV shows when the search input is empty. You already have the `shows state` that related to the those shows. Use [this](https://www.episodate.com/api/most-popular) API.
 
@@ -49,6 +49,6 @@ that shows the status of the show.
 ---
 
 
-To test your code enter the shows folder than run `npm start` in your terminal and in another terminal run `npm run test`. 
+To test your code run `npm start` in your terminal and in another terminal run `npm run test`. 
 
 
