@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './OneShow.css';
+import likedImg from "../media/liked.png"
+import notLikedImg from "../media/notLiked.png"
 
 function OneShow() {
   const { id } = useParams(); //this is the selected show id

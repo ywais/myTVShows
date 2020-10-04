@@ -5,7 +5,7 @@
 
 Welcome to our challenge! In this challenge we will test your abilities to create a simple react app and using API. Your task is to build a simple IMDB clone for TV shows.
 
-* The CSS will be provided to you. **Do not change it!**
+* The CSS will be provided to you. *Do not change it!*
 
 * You need to implement your code only where you asked to (you can see it in the comments inside the code).
 
@@ -23,12 +23,17 @@ Welcome to our challenge! In this challenge we will test your abilities to creat
 
 * Every time that the form submitted you will need to display the search results from this  API: https://www.episodate.com/api/search?q= + the searched input. If the form submitted empty the home page need to display the popular tv shows again.
 
-* After you finished the `Home` and the `Show` components tasks, you will need to fix the `OneShow` componenet, in this component you already got the id of the selected show and `Link` back to the `Home` page. 
+* After you finished the `Home` and the `Show` components tasks, you will need to fix the `OneShow` component, in this component you already got the id of the selected show and `Link` back to the `Home` page. 
 
 * Use this Api: https://www.episodate.com/api/show-details?q= + the show id
 to get the details of the show.
 
-* Beneath the `Link` that we provided to you create `div` with the class `one-show-img-and-title`, in this `div`
+* Beneath the `Link` that we provided to you create a `div` with the class `like-div`, in this `div`
+you will need to have an `img` with the class  `interaction-img`. Show `likedImg` with `alt='liked'` when its liked. otherwise, show `notLikedImg` with `alt='not liked'`. You can see the pictures in the top of the code.
+
+* Save the status of the image (liked or not liked) in local storage, so when you refresh you can see the same image.
+
+* Beneath the `like-div` that we provided to you create a `div` with the class `one-show-img-and-title`, in this `div`
 you will need to have `h2` with the show name, `img` with the class  `one-show-img` with the tv show img and 
 `div` with the class `one-show-footer`.
 
@@ -42,13 +47,11 @@ The class name of the `span` needs to be `green` if the tv show's rating greater
 * In the `one-show-footer` `div` you will need create `div` with the class `show-status` in this `div` you should have `span` with the class `status`
 that shows the status of the show.
 
-* Beneath the `one-show-img-and-title` `div` you will need to create `div` with class `one-show-description`. In this `div` you will need to create `h2` with the text: description: .  Beneath the `h2` element you will have to display the selected show discription.
+* Beneath the `one-show-img-and-title` `div` you will need to create `div` with class `one-show-description`. In this `div` you will need to create `h2` with the text: description: .  Beneath the `h2` element you will have to display the selected show description.
 
 
 ## Testing
 ---
 
 
-To test your code run `npm start` in your terminal and in another terminal run `npm run test`. 
-
-
+To test your code run `npm start` in your terminal and in another terminal run `npm run test`.
