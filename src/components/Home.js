@@ -16,6 +16,16 @@ function Home() {
     getTop20();
   }, []);
 
+  const handleSearch = async (event) => {
+    event.preventDefault();
+    if(searchParam) {
+      const { data } = await axios.get(`https://www.episodate.com/api/search?q=${searchParam}`);
+      setShows(data.tv_shows);
+    } else {
+      const { data } = await axios.get('https://www.episodate.com/api/most-popular');
+      setShows(data.tv_shows);
+    }
+  }
 
   return (
     <div className='app'>
@@ -23,12 +33,10 @@ function Home() {
       {/* If you want to know how to implement video as your background 
       you can take a look here: https://www.w3schools.com/howto/howto_css_fullscreen_video.asp */}
       <h1>The Best T.V Shows</h1>
-      {/*
-      
-        Insert your code here 
-      
-      
-      */}
+      <form>
+        <input id='search-bar' onChange={(event) => setSearchParam(event.target.value)}></input>
+        <button id='submit-btn' onClick={handleSearch}>Search</button>
+      </form>
       <div className="top-shows">
       {shows.map((show) => (
         <Show show={show} key={show.id} />
