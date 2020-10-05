@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Show from './Show';
 import './Home.css';
 import bg from '../video/popcorn.mp4';
+import axios from 'axios';
 
 function Home() {
   const [shows, setShows] = useState([]);
+  const [searchParam, setSearchParam] = useState([]);
 
-  /*
-      
-    Insert your code here 
-      
-      
-  */
+  useEffect(() => {
+    const getTop20 = async () => {
+      const { data } = await axios.get('https://www.episodate.com/api/most-popular');
+      setShows(data.tv_shows);
+    };
+    getTop20();
+  }, []);
+
 
   return (
     <div className='app'>

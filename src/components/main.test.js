@@ -21,7 +21,7 @@ const getGenrePath = (childNum)=>{
 }
 
 
-jest.setTimeout(30000);
+jest.setTimeout(10000);
 describe(projectName, () => {
   beforeAll(async () => {
     browser = await puppeteer.launch();
@@ -89,7 +89,7 @@ describe(projectName, () => {
             expect(lastShow).toBe(shows[19].name)
         })
   })
-    describe('One show test', () => {        
+    describe.skip('One show test', () => {        
         test("The app should go to the tv show page when clicking on tv show item",async()=>{
             await page.goto('http://localhost:3000');
             await page.waitForSelector('.tv-show');
