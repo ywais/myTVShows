@@ -37,7 +37,7 @@ function OneShow() {
       <Link className='go-back-link' to='/'>
         <img
           className='go-back-img'
-          a lt='Go back'
+          alt='Go back'
           src='https://img.icons8.com/metro/52/000000/circled-left-2.png'
         />
       </Link>
