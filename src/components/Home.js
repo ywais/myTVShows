@@ -8,11 +8,12 @@ function Home() {
   const [shows, setShows] = useState([]);
   const [searchParam, setSearchParam] = useState([]);
 
+  const getTop20 = async () => {
+    const { data } = await axios.get('https://www.episodate.com/api/most-popular');
+    setShows(data.tv_shows);
+  };
+
   useEffect(() => {
-    const getTop20 = async () => {
-      const { data } = await axios.get('https://www.episodate.com/api/most-popular');
-      setShows(data.tv_shows);
-    };
     getTop20();
   }, []);
 
@@ -22,8 +23,7 @@ function Home() {
       const { data } = await axios.get(`https://www.episodate.com/api/search?q=${searchParam}`);
       setShows(data.tv_shows);
     } else {
-      const { data } = await axios.get('https://www.episodate.com/api/most-popular');
-      setShows(data.tv_shows);
+      getTop20();
     }
   }
 
